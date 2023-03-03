@@ -41,7 +41,6 @@ export class DetailsRobotComponent implements OnInit {
   }
 
   onEdit() {
-    console.log(this.id+'/edit')
     this.router.navigate(['/'+this.id+'/edit'], { relativeTo: this.route });
   }
 
