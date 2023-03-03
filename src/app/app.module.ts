@@ -10,13 +10,21 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { RobotListComponent } from './Robots/listRobots/robot-list.component';
 import { RobotItemComponent } from './Robots/listRobots/robot-item/robot-item.component';
 import { RobotEditComponent } from './Robots/editRobots/robot-edit.component';
+import { DetailsRobotComponent } from './Robots/details-robot/details-robot.component';
+import { HeaderComponent } from './Header/header/header.component';
+import { BattleListComponent } from './Battle/battle-list/battle-list.component';
+import { BattlelogsComponent } from './Battle/battlelogs/battlelogs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RobotListComponent,
     RobotItemComponent,
-    RobotEditComponent
+    RobotEditComponent,
+    DetailsRobotComponent,
+    HeaderComponent,
+    BattleListComponent,
+    BattlelogsComponent
   ],
   imports: [
     BrowserModule,

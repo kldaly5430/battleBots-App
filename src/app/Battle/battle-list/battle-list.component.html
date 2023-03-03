@@ -1,0 +1,35 @@
+<div style="display:flex; justify-content:space-between;">
+    <div class="align-left">
+        <h2>Battle Bot 1</h2>
+        <select class="form-select" (change)="onBotSelectOne($event)">
+            <option value="" selected>Select a robot</option>
+            <option *ngFor="let robot of robots$ | async" [value]="robot.id">{{ robot?.name }}</option>
+        </select>
+        <div class="row">
+            <p>Attack: {{ robotOne?.attack }}</p>
+        </div>
+        <div class="row">
+            <p>Defense: {{ robotOne?.defense }}</p>
+        </div>
+    </div>
+    <div class="align-right">
+        <h2>Battle Bot 2</h2>
+        <select class="form-select" (change)="onBotSelectTwo($event)">
+            <option value="" selected>Select a robot</option>
+            <option *ngFor="let robot of robots$ | async" [value]="robot.id">{{ robot?.name }}</option>
+        </select>
+        <div class="row">
+            <p>Attack: {{ robotTwo?.attack }}</p>
+        </div>
+        <div class="row">
+            <p>Defense: {{ robotTwo?.defense }}</p>
+        </div>
+    </div>
+</div>
+<div style="text-align:center;">
+    <h1>Battle</h1>
+    <button type="button" class="btn btn-danger" (click)="onBattle()">Battle</button>
+    <div class="row">
+        <h1 id='winner'></h1>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<h1>Past Battles</h1>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Bot One</th>
+        <th scope="col">Bot Two</th>
+        <th scope="col">Winner</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let battleEl of battleData">
+        <td>{{ battleEl.botOneName }}</td>
+        <td>{{ battleEl.botTwoName }}</td>
+        <td>{{ battleEl.winner }}</td>
+      </tr>
+    </tbody>
+  </table>

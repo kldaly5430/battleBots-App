@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Robot } from '../robot.model';
+import { Robot } from '../robot';
+import { RobotsService } from '../robots.service';
 
 @Component({
   selector: 'app-robot-list',
@@ -9,13 +10,21 @@ import { Robot } from '../robot.model';
 })
 export class RobotListComponent implements OnInit {
 
-  constructor(private router: Router, private route: ActivatedRoute) { }
+  robotData: any = [];
+
+  constructor(private router: Router, private route: ActivatedRoute, private robotService: RobotsService) { }
 
   ngOnInit(): void {
+    this.getRobots();
   }
 
   onNewRobot() {
     this.router.navigate(['new'], { relativeTo: this.route });
   }
 
+  getRobots() {
+    this.robotService.getRobots().subscribe((res:Robot[])=>{
+      this.robotData = res;
+    })
+  }
 }

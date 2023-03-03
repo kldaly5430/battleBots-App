@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-12">
+    <img src="../../../assets/images/robot_head.jpg" alt="" class="img-responsive" style="max-height: 300px;">
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{ robot?.name }}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-3">
+    <ul class="list-group">
+      <li class="list-group-item">Color: {{ robot?.color }}</li>
+      <li class="list-group-item">Attack: {{ robot?.attack }}</li>
+      <li class="list-group-item">Defense: {{ robot?.defense }}</li>
+    </ul>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-xs-3">
+    <div class="btn-group" appDropdown>
+      <button type="button" class="btn btn-success" (click)="onEdit()">Edit Robot</button>
+      <button type="button" class="btn btn-danger" (click)="onDelete()">Delete Robot</button>
+    </div>
+  </div>
+</div>
